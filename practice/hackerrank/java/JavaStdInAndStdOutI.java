@@ -1,4 +1,4 @@
-package java;
+package practice.hackerrank.java;
 import java.util.Scanner;
 
 public class JavaStdInAndStdOutI {

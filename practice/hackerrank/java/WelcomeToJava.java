@@ -1,4 +1,4 @@
-package java;
+package practice.hackerrank.java;
 
 public class WelcomeToJava {
 

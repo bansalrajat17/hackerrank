@@ -1,4 +1,4 @@
-package greedyalgorithm.hackerrank;
+package practice.hackerrank.greedyalgorithm;
 
 
 import java.io.BufferedWriter;

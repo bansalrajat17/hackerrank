@@ -1,4 +1,4 @@
-package java.geeksforgeeks.lovebabbarsheet;
+package practice.geeksforgeeks.lovebabbarsheet;
 
 import java.util.ArrayList;
 import java.util.List;

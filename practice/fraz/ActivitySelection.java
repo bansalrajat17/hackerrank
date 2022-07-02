@@ -1,4 +1,4 @@
-package greedyalgorithm.fraz;
+package practice.fraz;
 
 public class ActivitySelection {
      /*

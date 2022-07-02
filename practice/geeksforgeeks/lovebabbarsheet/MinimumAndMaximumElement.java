@@ -1,4 +1,4 @@
-package java.geeksforgeeks.lovebabbarsheet;
+package practice.geeksforgeeks.lovebabbarsheet;
 
 import java.io.BufferedReader;
 import java.io.IOException;
