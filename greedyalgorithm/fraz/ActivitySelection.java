@@ -1,0 +1,18 @@
+package greedyalgorithm.fraz;
+
+public class ActivitySelection {
+     /*
+     * PROBLEM
+     * ACTIVITY SELECTION PROBLEM
+     * ACTIVITY - ACTIVITY-1,ACTIVITY-2,ACTIVITY-3,ACTIVITY-4
+     * START TIME - [08:00,09,00,12:00,15:00]
+     * END TIME - [10:45,11:00,13:00,16:00]
+     * 
+     * SOLUTION -:
+     * THE MAXIMUM NO OF ACTIVITY WE CAN PERFORM IS TO SELECT THOSE ACTIVITIES WHICH WILL FREE THE RESOURCE EARLIEST
+     *  
+     * PICK ACTIVITY 1 , PICK ACTIVITY 3 , PICK ACTIVITY 4
+     *  
+     *  
+     */
+}
