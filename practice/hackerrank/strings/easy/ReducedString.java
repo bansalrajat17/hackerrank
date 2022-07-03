@@ -1,4 +1,3 @@
-package practice.hackerrank.strings;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

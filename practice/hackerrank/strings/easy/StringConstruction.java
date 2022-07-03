@@ -1,45 +1,37 @@
-package practice.hackerrank.strings;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.IntStream;
 
 class Result {
 
     /*
-     * Complete the 'hackerrankInString' function below.
+     * Complete the 'stringConstruction' function below.
      *
-     * The function is expected to return a STRING.
+     * The function is expected to return an INTEGER.
      * The function accepts STRING s as parameter.
      */
 
-    public static String hackerrankInString(String s) {
+    public static int stringConstruction(String s) {
         // Write your code here
-        char[] hackerrank = { 'h', 'a', 'c', 'k', 'e', 'r', 'r', 'a', 'n', 'k' };
-        String result = "YES";
-        int count = 0;
-        if (s.length() < hackerrank.length) {
-            result = "NO";// BASE CASE.
+        int cost = 0;
+        Set<Character> characterSet = new HashSet<>();
+        for (Integer i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (!characterSet.contains(c)) {
+                cost++;
+                characterSet.add(c);
+            }
         }
-        for (Integer i = 0; i < hackerrank.length; i++) {
-            int in = s.indexOf(hackerrank[i]);
-            if (in >= 0) {
-                s = s.substring(in + 1);
-                count++;
-            } else
-                break;
-        }
-        if (count != hackerrank.length)
-            result = "NO";
-        return result;
-
+        return cost;
     }
 }
 
-public class HackerRankInAString {
+public class StringConstruction {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -50,9 +42,9 @@ public class HackerRankInAString {
             try {
                 String s = bufferedReader.readLine();
 
-                String result = Result.hackerrankInString(s);
+                int result = Result.stringConstruction(s);
 
-                bufferedWriter.write(result);
+                bufferedWriter.write(String.valueOf(result));
                 bufferedWriter.newLine();
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
