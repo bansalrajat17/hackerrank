@@ -1,4 +1,5 @@
-package practice.hackerrank.java;
+package easy;
+
 import java.util.Scanner;
 
 public class JavaStringsIntroduction {
