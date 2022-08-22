@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "practice/hackerrank/java",
-        "practice/hackerrank/algorithms/strings/easy"
+        "practice/hackerrank/algorithms/strings/easy",
+        "practice/workattech/easy/array"
     ]
 }

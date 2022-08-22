@@ -1,0 +1,40 @@
+Remove occurences
+Easy
+30 / 30
+Given an array and a number k, remove all occurrences of k from the array (in-place). Return the number of elements 'remainingSize' left after removing k. Note that removing the occurences is mandatory and will be checked in the main method. There can be anything beyond the first 'remainingSize' elements. It will be ignored.
+
+Example
+Array: [1, 4, 2, 6, 2, 6, 9, 4]
+Number: 4
+Answer: 6
+Explanation:[1, 2, 6, 2, 6, 9]
+Testing
+Input Format
+The first line contains an integer ‘T’ denoting the number of test cases.
+
+For each test case, the input contains two lines:
+
+An integer 'n' denoting the size of the array A and 'k' denoting the number to be removed.
+n space-separated integers denoting elements of the array A.
+Output format
+For each test-cases, the output has a line with an integer ‘len’ denoting the length of the resultant array.
+
+Sample Input
+2
+5 1
+1 1 1 2 2
+6 3
+1 3 3 3 4 4
+Expected Output
+2
+3
+Constraints
+1 <= T <= 100
+
+1 <= n <= 104
+
+1 <= Ai <= 105
+
+Topics
+Limits
+Creators
