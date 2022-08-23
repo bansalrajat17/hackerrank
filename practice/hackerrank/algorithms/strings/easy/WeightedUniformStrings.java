@@ -28,13 +28,13 @@ class Result {
         // Write your code here
         List<String> resultantList = new ArrayList<>();
         int ascii = 0;
-        int aList[] = new int[s.length()];
+        int[] aList = new int[s.length()];
         for (Integer i = 0; i < s.length(); i++) {
-            aList[i] = ((int) (s.charAt(i))) - 96;
-            if (((int) s.charAt(i)) == ascii) {
+            aList[i] = ((s.charAt(i))) - 96;
+            if ((s.charAt(i)) == ascii) {
                 aList[i] = aList[i] + aList[i - 1];
             }
-            ascii = (int) (s.charAt(i));
+            ascii = (s.charAt(i));
         }
         Set<Integer> ary = Arrays.stream(aList).boxed().collect(Collectors.toSet());
         queries.forEach(query -> {

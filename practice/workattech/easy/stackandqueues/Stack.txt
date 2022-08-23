@@ -1,0 +1,110 @@
+Practice Problem Link: Implement Stack using Array
+
+Please make sure to try solving the problem yourself before looking at the editorial.
+
+Problem Statement
+Implement a stack using an array as the underlying container.
+
+The Stack class should support the following methods:
+
+int size()
+boolean isEmpty()
+int top()
+void push(int element)
+void pop()
+Approach
+We will implement each of the functions by keeping track of the parameters: current size of the stack and top pointer. We perform both push and pop operations from the front of the stack. We can simply increment or decrement top pointers accordingly depending on whether its a push or a pop operation. Refer to the implementation for a better understanding of the concept.
+
+Analysis
+Time Complexity: O(1) for all the operations
+Space Complexity: O(1) for all the operations
+Implementation
+C++
+
+// Implement the Stack class
+class Stack {
+public:
+	vector<int> stack;
+	int topTrack, capacity, currentSize;
+	Stack (int capacity) {
+		this->capacity = capacity;
+		topTrack = -1;
+		currentSize = 0;
+		stack.resize(this->capacity);
+	}
+
+	bool isEmpty() {
+		return currentSize == 0;
+	}
+	
+	int size() {
+		return currentSize;
+	}
+	
+	int top() {
+		if(topTrack < 0) {
+			return -1;
+		}
+		return stack[topTrack];
+	}
+	
+	void push(int element) {
+		if(topTrack >= capacity - 1) {
+			return;
+		}
+		stack[++topTrack] = element;
+		currentSize++;
+	}
+	
+	void pop() {
+		if(topTrack < 0) {
+			return;
+		}
+		topTrack--;
+		currentSize--;
+	}
+};
+Java
+
+// Implement the Stack class
+class Stack {
+	int[] stack;
+	int top, capacity, currentSize;
+	public Stack (int capacity) {
+		this.capacity = capacity;
+		top = -1;
+		currentSize = 0;
+		stack = new int[this.capacity];
+	}
+
+	public boolean isEmpty() {
+		return currentSize == 0;
+	}
+	
+	public int size() {
+		return currentSize;
+	}
+	
+	public int top() {
+		if(top < 0) {
+			return -1;
+		}
+		return stack[top];
+	}
+	
+	public void push(int element) {
+		if(top >= capacity - 1) {
+			return;
+		}
+		stack[++top] = element;
+		currentSize++;
+	}
+	
+	public void pop() {
+		if(top < 0) {
+			return;
+		}
+		top--;
+		currentSize--;
+	}
+}
